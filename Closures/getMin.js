@@ -1,0 +1,1 @@
+/** Declare a function 'getMin' that accepts a callback as an argument. The 'getMin' returns a function which takes in an array of numbers as an argument. When the return function was called, it should return the value from the original array with the index is the index of minimum value after applying the callback to each element in the original array. */
