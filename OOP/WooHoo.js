@@ -1,0 +1,14 @@
+// Declare a function 'WooHoo', which takes in a string as a single argument and returns an instance of a 'WooHoo' object when invoked with the 'new' keyword.
+// All WooHoo objects should contain their own 'inbox' and 'username' properties. The 'inbox' is an object with the 'size' property to keep track of the number of items in the 'inbox'. Each item will represent a message with the following properties:
+//    - 'from': the username of sender (from other WooHoo instances)
+//    - 'message': the content of message
+//    - 'unread': when a new message arrives, the default value is set to true to indicate that the message is unread
+//    - 'when': the date in the format 'MM/DD/YYYY' when a new message was sent to the recipient
+// When a WooHoo is first created, it should have an inbox object with a single size (set to 0) property, and a username set to the passed-in argument.
+// - Task 1: Declare a function 'send', which is accessible to ALL instances of 'WooHoo'. 'send' should take in at most 3 arguments as follows:
+//    - 'to': a username to which a message should be sent (required --should be represented under a WooHoo instance)
+//    - 'message': the text as message content (required)
+//    - 'date': the date (in the format of 'MM/DD/YYYY') for which the message will be sent (optional --default is today)
+// When invoked on a 'WooHoo' instance, should update the inbox of the recipient ('to') properly, i.e. add a new message to the inbox with the key being an id as a unique 6-character long string (FREE to go with any possible algorithms to generate unique-like ids) and the value being an object containing the necessary information to construct a new message. If there're more than 3 messages from the same user in a day, tag all messages from that user in that day as 'spamWarning' --i.e. add one more property called 'spamWarning' to these messages and set it to 'true'. Update the size of the inbox properly.
+// - Task 2: Declare a function 'markAllAsRead', which is accessible to ALL instances of 'WooHoo'. 'markAllAsRead' should take in no arguments and when invoked on a WooHoo instance, should mark all unread messages as read - i.e. unread property should be updated to false. In case there's no message in the inbox, return "Woo-Hoo!!! Your inbox is empty :)".
+// - Task 3: Declare a function 'filter', which is accessible to ALL instances of 'WooHoo'. 'filter' should take in at most 3 arguments: 'fromUsername', 'startDate', 'endDate', and when invoked on a WooHoo instance, should filter messages properly based on the passed-in arguments and return an array of ids.
