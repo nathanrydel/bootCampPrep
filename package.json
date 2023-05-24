@@ -1,0 +1,27 @@
+{
+  "name": "bootcampprep",
+  "version": "1.0.0",
+  "description": "Prep for Bootcamp technical assessments 2023",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanrydel/bootCampPrep.git"
+  },
+  "author": "nathanrydel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathanrydel/bootCampPrep/issues"
+  },
+  "homepage": "https://github.com/nathanrydel/bootCampPrep#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
+  }
+}
