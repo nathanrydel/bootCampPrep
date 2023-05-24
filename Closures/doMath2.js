@@ -7,7 +7,7 @@ function doMath(initialValue) {
   // declare a result variable and set to initialValue
   let result = initialValue;
   // return a function that takes an operator and a number
-  return function(operator, number) {
+  return function (operator, number) {
     // check if operator is =
     if (operator === '=') {
       // if so, return result
