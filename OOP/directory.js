@@ -19,8 +19,42 @@ class Directory {
       folders: 0,
     };
   }
+
   // declare a function new that takes path: array and items: array
   // path is a link to the destination folder where items is stored
+  new(path, items) {
+    // use recursion in a helper function to create folders
+    // set it to take in a pathArr: array and the currentDir
+    function createFolders(pathArr, currentDir) {
+      // check if pathArr is 0
+      if (pathArr.length === 0) {
+        // if so, return currentDir
+        return currentDir;
+      }
+
+      // declare a variable folderName and set equal to first item of pathArr
+      const folderName = pathArr.shift();
+      // check if NOT currentDir at folderName
+      if (!currentDir[folderName]) {
+        // if so, create a new Directory
+        currentDir[folderName] = new Directory();
+        // increment number of folders
+        currentDir.contains.folders++;
+      }
+      // return recursive call of createFolders with pathArr and currentDir[foldername]
+      return createFolders(pathArr, currentDir[folderName]);
+    }
+    // declare new constant destination and set equal evaluated result of createFolders passing in path and this
+    const destination = createFolders(path, this);
+
+    // for each item in items
+    items.forEach((item) => {
+      // update the item length at the item in destination
+      destination[item] = item.length;
+      // increment number of files
+      destination.contains.files++;
+    });
+  }
 }
 
 const dir = new Directory();
