@@ -8,25 +8,49 @@ If the 'items' is empty, add a new empty folder (represented as an empty object)
 - Task 5: Declare a function 'select', which is accessible to ALL instances of 'Directory'. 'select' should take in no arguments, and when invoked on a Directory instance, should return an array of empty folders.
 - Task 6: Declare a function 'getLargestFolder', which is accessible to ALL instances of 'Directory'. 'getLargestFolder' should take in no arguments, and when invoked on a Directory instance, should return the folder with the most items inside. If there's more than one valid item, return any of them. */
 
+// declare a class Directory
+class Directory {
+  // initialize the constructor
+  constructor() {
+    // declare a key, contains: obj
+    this.contains = {
+      // initialze keys files: number and folders: number to 0;
+      files: 0,
+      folders: 0,
+    };
+  }
+  // declare a function new that takes path: array and items: array
+  // path is a link to the destination folder where items is stored
+}
+
 const dir = new Directory();
-dir.new(['hey', 'follow', 'me', 'to', 'find'], ['WannaCry.exe', 'readme.txt']);
-dir.new(['hey', 'follow', 'me', 'to', 'debug'], ['source.js', 'index.js', 'solution.js']);
-dir.new(['hey', 'follow'], ['Tarzan.rar']);
-dir.new(['this', 'path', 'leads', 'to', 'empty', 'folders'], []);
-dir.new(['this', 'path', 'leads', 'to', 'empty', 'folders'], []);
-dir.new(['this', 'path', 'leads', 'to', 'empty', 'folders'], []);
-dir.new(['this', 'path', 'leads', 'to'], ['somewhere.png']);
-dir.new(['this', 'path', 'leads', 'to'], ['NewYork.pdf']);
-dir.new(['all', 'roads', 'lead', 'to'], ['Rome.jpg']);
+dir.new(["hey", "follow", "me", "to", "find"], ["WannaCry.exe", "readme.txt"]);
+dir.new(
+  ["hey", "follow", "me", "to", "debug"],
+  ["source.js", "index.js", "solution.js"]
+);
+dir.new(["hey", "follow"], ["Tarzan.rar"]);
+dir.new(["this", "path", "leads", "to", "empty", "folders"], []);
+dir.new(["this", "path", "leads", "to", "empty", "folders"], []);
+dir.new(["this", "path", "leads", "to", "empty", "folders"], []);
+dir.new(["this", "path", "leads", "to"], ["somewhere.png"]);
+dir.new(["this", "path", "leads", "to"], ["NewYork.pdf"]);
+dir.new(["all", "roads", "lead", "to"], ["Rome.jpg"]);
 
 console.log(dir);
 /*
 Directory { hey: { follow: { me: { to: { find: { WannaCry.exe: 12, readme.txt: 10 }, debug: { source.js: 9, index.js: 8, solution.js: 11 } } }, Tarzan.rar: 10 } }, this: { path: { leads: { to: { empty: { folders: { New Folder (1): { }, New Folder (2): { }, New Folder (3): { } } }, somewhere.png: 13, NewYork.pdf: 11 } } } }, all: { roads: { lead: { to: { Rome.jpg: 8 } } } } }
 */
 
-console.log(dir.move(['source.js', 'index.js'], ['hey', 'follow', 'me', 'to', 'debug'], ['this', 'path', 'leads', 'to', 'a', 'new', 'place'])); // -> 'source.js, index.js are now in a new place!'
+console.log(
+  dir.move(
+    ["source.js", "index.js"],
+    ["hey", "follow", "me", "to", "debug"],
+    ["this", "path", "leads", "to", "a", "new", "place"]
+  )
+); // -> 'source.js, index.js are now in a new place!'
 /*
 Directory { hey: { follow: { me: { to: { find: { WannaCry.exe: 12, readme.txt: 10 }, debug: { solution.js: 11 } } }, Tarzan.rar: 10 } }, this: { path: { leads: { to: { empty: { folders: { New Folder (1): { }, New Folder (2): { }, New Folder (3): { } } }, somewhere.png: 13, NewYork.pdf: 11, a: { new: { place: { source.js: 9, index.js: 8 } } } } } } }, all: { roads: { lead: { to: { Rome.jpg: 8 } } } } }
 */
 
-console.log(dir.check('NewYork.pdf')); // -> 'this > path > leads > to > NewYork.pdf'
+console.log(dir.check("NewYork.pdf")); // -> 'this > path > leads > to > NewYork.pdf'
