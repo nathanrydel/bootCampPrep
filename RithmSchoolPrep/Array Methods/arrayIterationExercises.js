@@ -3,8 +3,8 @@
 let people = ["Greg", "Mary", "Devon", "James"];
 
 // Using a loop, iterate through this array and console.log all of the people.
-for (let i = 0; i < people.length; i++) {
-  console.log(people[i]);
+for (const name of people) {
+  console.log(name);
 }
 // Write the command to remove “Greg” from the array.
 people.shift();
@@ -27,8 +27,7 @@ for (const name of people) {
 }
 // expected output: Matt \nl Mary
 // Write the command to make a copy of the array using slice. The copy should NOT include “Mary” or “Matt”.
-const peopleCopy = people.slice(2);
-console.log(peopleCopy); // expected output: ["Devon", "Nathan"]
+console.log(people.slice(2)); // expected output: ["Devon", "Nathan"]
 // Write the command that gives the indexOf where “Mary” is located.
 console.log(people.indexOf("Mary")); // expected output: 1
 // Write the command that gives the indexOf where “Foo” is located (this should return -1).
