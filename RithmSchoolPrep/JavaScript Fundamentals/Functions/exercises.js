@@ -103,10 +103,12 @@ function multipleLetterCount(word) {
   const outputObj = {};
   // iterate thru word
   for (let i = 0; i < word.length; i++) {
-    // if key exists, increment count
+    // if key does not exist, set value to 1
     if (!(word[i] in outputObj)) {
+      // set value at key to 1
       outputObj[word[i]] = 1;
     } else {
+      // increment value
       outputObj[word[i]]++;
     }
   }
