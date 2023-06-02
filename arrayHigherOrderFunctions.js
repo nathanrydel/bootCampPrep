@@ -49,13 +49,13 @@ console.log(firstNames);
 //1. Get total mass of all characters
 const totalMass = characters.reduce(
   (mass, character) => mass + character.mass,
-  0
+  0,
 );
 console.log(totalMass);
 //2. Get total height of all characters
 const totalHeight = characters.reduce(
   (height, character) => height + character.height,
-  0
+  0,
 );
 console.log(totalHeight);
 //3. Get total number of characters by eye color
@@ -72,14 +72,14 @@ console.log(totalByEyeColor);
 //4. Get total number of characters in all the character names
 const totalNumOfChars = characters.reduce(
   (charNum, character) => charNum + character.name.length,
-  0
+  0,
 );
 console.log(totalNumOfChars);
 
 //***FILTER***
 //1. Get characters with mass greater than 100
 const massGreaterThan100 = characters.filter(
-  (character) => character.mass > 100
+  (character) => character.mass > 100,
 );
 console.log(massGreaterThan100);
 //2. Get characters with height less than 200
@@ -87,12 +87,12 @@ const shorterThan200 = characters.filter((character) => character.height < 200);
 console.log(shorterThan200);
 //3. Get all male characters
 const maleCharacters = characters.filter(
-  (character) => character.gender === "male"
+  (character) => character.gender === "male",
 );
 console.log(maleCharacters);
 //4. Get all female characters
 const femaleCharacters = characters.filter(
-  (character) => character.gender === "female"
+  (character) => character.gender === "female",
 );
 console.log(femaleCharacters);
 
@@ -110,6 +110,7 @@ const byName = characters.sort((a, b) => {
 });
 console.log(byName);
 //4. Sort by gender
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const byGender = characters.sort((a, b) => {
   if (a.gender === "female") return -1;
   return 1;
@@ -133,21 +134,21 @@ console.log(allMale);
 //***SOME***
 //1. Is there at least one male character?
 const atLeastOneMale = characters.some(
-  (character) => character.gender === "male"
+  (character) => character.gender === "male",
 );
 console.log(atLeastOneMale);
 //2. Is there at least one character with blue eyes?
 const atLeastOneBlueEyes = characters.some(
-  (character) => character.eye_color === "blue"
+  (character) => character.eye_color === "blue",
 );
 console.log(atLeastOneBlueEyes);
 //3. Is there at least one character taller than 210?
 const atLeastOneTaller210 = characters.some(
-  (character) => character.height > 210
+  (character) => character.height > 210,
 );
 console.log(atLeastOneTaller210);
 //4. Is there at least one character that has mass less than 50?
 const atLeastOneMassLess50 = characters.some(
-  (character) => character.mass < 50
+  (character) => character.mass < 50,
 );
 console.log(atLeastOneMassLess50);
