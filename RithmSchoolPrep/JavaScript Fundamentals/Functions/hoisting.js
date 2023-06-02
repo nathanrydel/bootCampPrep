@@ -4,11 +4,13 @@ function sayHi(name) {
   return "Hello " + name;
 }
 
-sayHiAgain("Matt"); // Throws an error!
+// sayHiAgain("Matt"); // Throws an error!
 
 let sayHiAgain = function (name) {
   return "Hello " + name;
 };
+
+sayHiAgain("Matt");
 
 /*
 function findLowest(values) {
@@ -44,3 +46,7 @@ function findLowest(values) {
   }
   return lowestNumber;
 }
+
+const values = [62, 32, 66, 44, 123, 87, 99, 44];
+
+console.log(findLowest(values)); // 32
