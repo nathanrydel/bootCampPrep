@@ -173,3 +173,47 @@ console.log(isPalindrome("robert")); // false
 // Part 3
 // Rock / Paper / Scissor
 // using your knowledge so far, build a game of Rock/Paper/Scissor where through the use of the prompt function, a user can enter their choice and based on a random selection – they can either tie/win or lose against a computer.
+
+function rockPaperScissors() {
+  // create a function to choose computer value
+  function getComputerValue(num) {
+    // if num less than .33 return rock
+    if (num <= 0.33) return "rock";
+    // if num between .34 and .66 return paper
+    else if (num <= 0.66) return "paper";
+    // else return scissor
+    return "scissor";
+  }
+
+  // get user choice using the prompt function and set as variable
+  // set to lowercase for ease of comp
+  let userChoice = prompt("Choose rock, paper, or scissor").toLocaleLowerCase();
+  // declare computer choice and set equal to eval result of getComputerValue with random val
+  let computerChoice = getComputerValue(Math.random());
+
+  // define answer matrix as array
+  const answers = ["rock", "paper", "scissor"];
+
+  // check if user made valid choice
+  if (!userChoice || answers.indexOf(userChoice) === -1) {
+    return "Please choose a valid option!";
+  }
+
+  // Handle ties
+  if (userChoice === computerChoice) return "Tie!";
+
+  // Handle game logic for computer beating user
+  // paper beats rock
+  if (userChoice === "rock" && computerChoice === "paper")
+    return `You lost! The computer picked ${computerChoice}.`;
+  // rock beats scissor
+  if (userChoice === "scissor" && computerChoice === "rock")
+    return `You lost! The computer picked ${computerChoice}.`;
+  // scissor beats paper
+  if (userChoice === "paper" && computerChoice === "scissor")
+    return `You lost! The computer picked ${computerChoice}.`;
+
+  return `You won! The computer picked ${computerChoice}!`;
+}
+
+rockPaperScissors();
