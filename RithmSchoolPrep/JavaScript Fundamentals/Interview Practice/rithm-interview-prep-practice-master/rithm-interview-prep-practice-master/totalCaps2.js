@@ -12,33 +12,4 @@ console.log(totalCaps(["hello", "world"])); // 0
 // output: number (of capitals)
 
 // add whatever parameters you deem necessary - good luck!
-function totalCaps(array) {
-  // declare totalCount
-  let totalCount = 0;
-  // iterate thru elements of array
-  for (let ele of array) {
-    // add evaluated result of calling capCounter on element to totalCounter
-    totalCount += capCounter(ele);
-  }
-  // return totalCount
-  return totalCount;
-}
-
-// declare a helper function, capCounter, and passin a string
-function capCounter(string) {
-  // declare counter
-  let counter = 0;
-  // declare cap variable
-  const caps = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
-
-  // iterate thru char of string
-  for (let char of string) {
-    // check if string includes char
-    if (caps.includes(char)) {
-      // if so, increment count
-      counter++;
-    }
-  }
-  // return counter;
-  return counter;
-}
+function totalCaps(array) {}
