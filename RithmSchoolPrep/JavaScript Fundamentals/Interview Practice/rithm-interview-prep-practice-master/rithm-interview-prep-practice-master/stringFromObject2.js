@@ -19,14 +19,4 @@ console.log(
 console.log(stringFromObject({})); // ""
 
 // add whatever parameters you deem necessary - good luck!
-function stringFromObject(object) {
-  // declare output string
-  let outputStr = "";
-  // iterate over object
-  for (let key in object) {
-    // add key and value pair to outputStr
-    outputStr += `${key} = ${object[key]}, `;
-  }
-  // return the outputStr without last 2 chars
-  return outputStr.slice(0, -2);
-}
+function stringFromObject(object) {}

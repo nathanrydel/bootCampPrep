@@ -4,9 +4,9 @@
  *  then slice off the comma and space at the end
  */
 function stringFromObject(obj) {
-  let finalStr = '';
+  let finalStr = "";
   for (let key in obj) {
-    finalStr += key + ' = ' + obj[key] + ', ';
+    finalStr += key + " = " + obj[key] + ", ";
   }
   return finalStr.slice(0, -2);
 }
@@ -19,6 +19,20 @@ function stringFromObject(obj) {
  */
 function stringFromObjectDeclarative(obj) {
   return Object.entries(obj)
-    .map(pair => pair.join(' = '))
-    .join(', ');
+    .map((pair) => pair.join(" = "))
+    .join(", ");
 }
+
+console.log(stringFromObjectDeclarative({ a: 1, b: "2" }));
+// "a = 1, b = 2"
+
+console.log(
+  stringFromObjectDeclarative({
+    name: "Elie",
+    job: "Instructor",
+    isCatOwner: false,
+  }),
+);
+// "name = Elie, job = Instructor, isCatOwner = false"
+
+console.log(stringFromObject({}));
