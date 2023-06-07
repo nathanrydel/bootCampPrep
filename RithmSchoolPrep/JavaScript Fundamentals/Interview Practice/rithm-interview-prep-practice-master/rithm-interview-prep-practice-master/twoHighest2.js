@@ -19,26 +19,4 @@ console.log(twoHighest([1, 2, 2])); // [2, 2];
 // output: array of 2 highest elements of array
 
 // add whatever parameters you deem necessary - good luck!
-function twoHighest(array) {
-  // declare highest and set to -Infinity
-  let highest = -Infinity;
-  // declare secondHighest
-  let secondHighest = -Infinity;
-  // iterate thru arr
-  for (let num of array) {
-    // check if element is greater than secondHighest
-    if (num > secondHighest) {
-      // if so, update variable
-      secondHighest = num;
-    }
-    // check if secondHighest greater than or equal to highest
-    if (secondHighest >= highest) {
-      // if so, update highest
-      // create temp var to swap
-      let temp = highest;
-      highest = secondHighest;
-      secondHighest = temp;
-    }
-  }
-  return [secondHighest, highest];
-}
+function twoHighest(array) {}
