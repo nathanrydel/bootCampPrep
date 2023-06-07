@@ -14,6 +14,17 @@ console.log(
   pluck([{ name: "Tim" }, { name: "Matt" }, { name: "Elie" }], "age"),
 );
 // [undefined, undefined, undefined]
+console.log(
+  pluck(
+    [
+      { name: "Tim", isBoatOwner: true },
+      { name: "Matt", isBoatOwner: false },
+      { name: "Elie" },
+    ],
+    "isBoatOwner",
+  ),
+);
+// [true, false, undefined]
 
 // add whatever parameters you deem necessary - good luck!
 
