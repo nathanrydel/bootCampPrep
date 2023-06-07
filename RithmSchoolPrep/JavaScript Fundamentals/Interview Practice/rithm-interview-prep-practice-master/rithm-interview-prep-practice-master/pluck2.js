@@ -17,14 +17,4 @@ console.log(
 
 // add whatever parameters you deem necessary - good luck!
 
-function pluck(arr, key) {
-  // declare valuesArr
-  let valuesArr = [];
-  // iterate over the array
-  for (let i = 0; i < arr.length; i++) {
-    // push the value of arr at i at key
-    valuesArr.push(arr[i][key]);
-  }
-  // return valuesArr
-  return valuesArr;
-}
+function pluck() {}
