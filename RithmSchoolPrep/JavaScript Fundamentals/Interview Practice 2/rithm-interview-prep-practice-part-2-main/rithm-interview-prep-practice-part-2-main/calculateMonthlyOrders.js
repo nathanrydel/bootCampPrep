@@ -17,7 +17,7 @@ let orders1 = [
   },
 ];
 
-calculateMonthlyOrders(orders1); // 10;
+console.log(calculateMonthlyOrders(orders1)); // 10;
 
 let orders2 = [
   {
@@ -50,8 +50,21 @@ let orders2 = [
   },
 ];
 
-calculateMonthlyOrders(orders2); // 16800
+console.log(calculateMonthlyOrders(orders2)); // 16800
 
-function calculateMonthlyOrders() {
-  // add whatever parameters you deem necessary - good luck!
+// input: Array of objects
+// output: number of orders
+
+function calculateMonthlyOrders(array) {
+  // declare total orders
+  let total = 0;
+  // iterate over the objects of the array
+  for (let element of array) {
+    // iterate over the keys
+    for (let key in element) {
+      // add values to total
+      total += element[key];
+    }
+  }
+  return total;
 }
