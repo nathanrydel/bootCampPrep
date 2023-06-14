@@ -19,7 +19,7 @@ let todos1 = [
   },
 ];
 
-findHighestPriorityTodo(todos1); // ["Sleep", 22]
+console.log(findHighestPriorityTodo(todos1)); // ["Sleep", 22]
 
 let todos2 = [
   {
@@ -36,8 +36,26 @@ let todos2 = [
   },
 ];
 
-findHighestPriorityTodo(todos2); // ["Task 3", 3]
+console.log(findHighestPriorityTodo(todos2)); // ["Task 3", 3]
+
+// input: array of objects
+// ouput: Array of task value, priorty value
 
 function findHighestPriorityTodo(todos) {
-  // add whatever parameters you deem necessary - good luck!
+  // initialize highestPriority and set to -Infinity
+  let highestPriority = -Infinity;
+  // initialize highestTask and set to empty string
+  let highestTask = "";
+
+  // iterate over each object of todos
+  for (const todo of todos) {
+    // check if todo.priority > highestPriority
+    if (todo.priority > highestPriority) {
+      // if so update highestPriority and highestTask
+      highestPriority = todo.priority;
+      highestTask = todo.task;
+    }
+  }
+  // return [highestTask, highestPriority];
+  return [highestTask, highestPriority];
 }
