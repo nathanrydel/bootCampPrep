@@ -10,10 +10,25 @@ let moves = [
   ["g", "h", "h"],
 ];
 
-findFirstMove(moves, "a"); // [0, 0]
-findFirstMove(moves, "h"); // [2, 1]
-findFirstMove(moves, "z"); // -1
+console.log(findFirstMove(moves, "a")); // [0, 0]
+console.log(findFirstMove(moves, "h")); // [2, 1]
+console.log(findFirstMove(moves, "z")); // -1
 
-function findFirstMove() {
-  // add whatever parameters you deem necessary - good luck!
+// inputs: arr of arrays, str
+// output: arr of subArr1 index, subArr Element index
+
+function findFirstMove(arr, str) {
+  // iterate over the arrays
+  for (let i = 0; i < arr.length; i++) {
+    // iterate over each array
+    for (let j = 0; j < arr[i].length; j++) {
+      // check if the element matches the str
+      if (arr[i][j] === str) {
+        // if so, push array index and element index
+        return [i, j];
+      }
+    }
+  }
+  // return output;
+  return -1;
 }
