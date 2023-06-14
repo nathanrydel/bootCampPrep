@@ -23,7 +23,7 @@ let schedule2 = {
   Sunday: true,
 };
 
-scheduleCheck(schedule1, schedule2); // 7;
+console.log(scheduleCheck(schedule1, schedule2)); // 7;
 
 let schedule3 = {
   Monday: true,
@@ -44,8 +44,19 @@ let schedule4 = {
   Sunday: true,
 };
 
-scheduleCheck(schedule3, schedule4); // 6;
+console.log(scheduleCheck(schedule3, schedule4)); // 6;
 
-function scheduleCheck() {
-  // add whatever parameters you deem necessary - good luck!
+function scheduleCheck(obj1, obj2) {
+  // declare match counter
+  let count = 0;
+  // iterate over obj1 keys
+  for (let key in obj1) {
+    // check if value of key at obj1 AND obj2 are true
+    if (obj1[key] === true && obj2[key] === true) {
+      // if so, increment count
+      count++;
+    }
+  }
+  // return count;
+  return count;
 }
