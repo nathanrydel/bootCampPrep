@@ -4,12 +4,13 @@
 
 // Examples:
 
-replaceAfter(["1", "2", "a", "b", "3", "4"], 2);
+console.log(replaceAfter(["1", "2", "a", "b", "3", "4"], 2));
 // ["1", "2", "Hello", "world", "3", "4"]
 
-replaceAfter(["a", "b", "c"], 0);
+console.log(replaceAfter(["a", "b", "c"], 0));
 // ["Hello", "world", "c"]
 
-function replaceAfter() {
-  // add whatever parameters you deem necessary - good luck!
+function replaceAfter(arr, index) {
+  arr.splice(index, 0, "Hello", "world");
+  return arr;
 }
