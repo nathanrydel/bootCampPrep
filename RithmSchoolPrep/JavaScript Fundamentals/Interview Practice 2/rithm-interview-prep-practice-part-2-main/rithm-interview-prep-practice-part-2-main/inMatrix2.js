@@ -13,18 +13,4 @@ console.log(inMatrix(matrix, 5)); // true
 console.log(inMatrix(matrix, 8)); // true
 console.log(inMatrix(matrix, 10)); // false
 
-// input: array of arrays, value
-// output: Boolean if value is included in matrix
-
-function inMatrix(matrix, value) {
-  // iterate over the arrays of matrix
-  for (const array of matrix) {
-    // check if array includes the value
-    if (array.includes(value)) {
-      // if so, return true
-      return true;
-    }
-  }
-  // return false;
-  return false;
-}
+function inMatrix() {}
