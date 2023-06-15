@@ -14,4 +14,19 @@ console.log(countNumbers(["7", "12", "a", "", "6", "8", " "])); // 4
 // output: number of numbers
 
 // add whatever parameters you deem necessary - good luck!
-function countNumbers(arr) {}
+function countNumbers(arr) {
+  // initialize counter
+  let counter = 0;
+  // iterate over the elements of array
+  for (let element of arr) {
+    // convert the element to a number with parseInt
+    const elementToNumber = parseInt(element);
+    // check if not isNaN
+    if (!isNaN(elementToNumber)) {
+      // if so, update counter
+      counter++;
+    }
+  }
+  // return counter;
+  return counter;
+}
