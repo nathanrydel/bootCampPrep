@@ -31,29 +31,4 @@ console.log(
 // input: array of objects, key: string
 // output: value of object at key
 
-function pluck(ArrOfObj, target) {
-  // declare results array
-  const results = [];
-  // iterate over the elements of the array
-  for (let object of ArrOfObj) {
-    // declare found tracker
-    let found = false;
-    // iterate over the keys in the object
-    for (let key in object) {
-      // check if key matches target
-      if (key === target) {
-        // if so, push value to results
-        results.push(object[key]);
-        found = true;
-        break;
-      }
-    }
-    // check if target not found
-    if (!found) {
-      // if so, push undefined to results
-      results.push(undefined);
-    }
-  }
-  // return results;
-  return results;
-}
+function pluck() {}
