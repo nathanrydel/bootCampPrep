@@ -4,7 +4,9 @@
 
 // Examples:
 
-separateLanguages(["python", "python", "python", "javascript", "c++"]);
+console.log(
+  separateLanguages(["python", "python", "python", "javascript", "c++"]),
+);
 /*
 {
   python: 3,
@@ -13,14 +15,14 @@ separateLanguages(["python", "python", "python", "javascript", "c++"]);
 }
 */
 
-separateLanguages(["python", "python", "spanish", "javascript"]);
+console.log(separateLanguages(["python", "python", "spanish", "javascript"]));
 /*
   python: 2,
   javascript: 1,
   other: ["spanish"],
 }
 */
-separateLanguages(["greek", "french", "yoruba", "python"]);
+console.log(separateLanguages(["greek", "french", "yoruba", "python"]));
 /*
 {
   python: 1,
@@ -29,6 +31,35 @@ separateLanguages(["greek", "french", "yoruba", "python"]);
 }
 */
 
-function separateLanguages() {
-  // add whatever parameters you deem necessary - good luck!
+// input: array of strings
+// output: object with python: number, javascript: number, and other: array
+
+// declare a function separateLanguages with languages: array as parameter
+
+function separateLanguages(languages) {
+  // initialize langObj
+  // define properties python: 0, javascript: 0, other: []
+  const langObj = {
+    python: 0,
+    javascript: 0,
+    other: [],
+  };
+
+  // iterate over languages
+  for (let language of languages) {
+    // check if language is python
+    if (language === "python") {
+      // if so, increment langObj.python
+      langObj.python++;
+    } else if (language === "javascript") {
+      // else if, language is javascript
+      // if so increment langObj.javascript
+      langObj.javascript++;
+    } else {
+      // else, push to langObj.other
+      langObj.other.push(language);
+    }
+  }
+  // return langObj;
+  return langObj;
 }
