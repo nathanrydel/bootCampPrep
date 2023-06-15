@@ -15,4 +15,27 @@ console.log(minMaxKeyInObject({ 1: "Elie", 4: "Matt", 2: "Tim" }));
 // ouput: array of lowest key and highest key
 
 // add whatever parameters you deem necessary - good luck!
-function minMaxKeyInObject(object) {}
+function minMaxKeyInObject(object) {
+  // declare minKey and set to Infinity
+  let minKey = Infinity;
+  // declare maxKey and set to -Infinity
+  let maxKey = -Infinity;
+
+  // iterate over the object to get the key
+  for (const key in object) {
+    // convert key to Number with parseInt
+    const keyToNum = parseInt(key);
+    // check if keyToNum is less than minKey
+    if (keyToNum < minKey) {
+      // if so, update minKey
+      minKey = keyToNum;
+    }
+    // check if keyToNum is greater than maxKey
+    if (keyToNum > maxKey) {
+      // if so, update maxKey
+      maxKey = keyToNum;
+    }
+  }
+  // return [minKey, maxKey];
+  return [minKey, maxKey];
+}
