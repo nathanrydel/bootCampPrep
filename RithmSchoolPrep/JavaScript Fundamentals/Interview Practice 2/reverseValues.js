@@ -21,9 +21,9 @@ function reverseValues(arr) {
   // iterate over the array with access to index
   for (let i = 0; i < arr.length; i++) {
     // check if element is not even
-    if (arr[i] % 2 !== 0) {
+    if (arr[i] % 2 === 1) {
       // if so, shift to output array
-      output.shift(arr[i]);
+      output.unshift(arr[i]);
     } else {
       // else, update i to i + 2;
       i = i + 2;

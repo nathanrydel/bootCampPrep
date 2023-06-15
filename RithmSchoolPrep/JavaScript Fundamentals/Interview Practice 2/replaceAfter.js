@@ -11,6 +11,6 @@ console.log(replaceAfter(["a", "b", "c"], 0));
 // ["Hello", "world", "c"]
 
 function replaceAfter(arr, index) {
-  arr.splice(index, 0, "Hello", "world");
+  arr.splice(index, 2, "Hello", "world");
   return arr;
 }
