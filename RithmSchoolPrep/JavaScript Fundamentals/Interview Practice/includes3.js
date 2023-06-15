@@ -17,31 +17,8 @@ console.log(includes("abcd", "b")); // true
 console.log(includes("abcd", "e")); // false
 console.log(includes("abcd", "a", 2)); // false
 
-// input: collection: object, array, string; value: number; index: number (opt)
-// ouput: Boolean
+// input:
+// ouput:
 
 // add whatever parameters you deem necessary - good luck!
-function includes(collection, value, index) {
-  // check if collection is not an array AND not a string
-  if (!Array.isArray(collection) && typeof collection !== "string") {
-    // handling the object
-    // iterate over the keys in collection
-    for (let key in collection) {
-      // check if the value is equal to the value of the key
-      if (value === collection[key]) {
-        // if so return true
-        return true;
-      }
-    }
-    // return false;
-    return false;
-  }
-
-  // check if index var does not exist (undefined)
-  if (index === undefined) {
-    // if so, check and return the indexOf value is truthy in collection
-    return collection.indexOf(value) > -1;
-  }
-  // return if collection starting from index has the indexOf value (greater than -1)
-  return collection.slice(index).indexOf(value) > -1;
-}
+function includes() {}
