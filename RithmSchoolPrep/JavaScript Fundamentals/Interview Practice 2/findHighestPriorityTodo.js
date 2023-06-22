@@ -42,8 +42,8 @@ console.log(findHighestPriorityTodo(todos2)); // ["Task 3", 3]
 // ouput: Array of task value, priorty value
 
 function findHighestPriorityTodo(todos) {
-  // initialize highestPriority and set to -Infinity
-  let highestPriority = -Infinity;
+  // initialize highestPriority and set to -Number.Positive_Infinity
+  let highestPriority = -Number.Positive_Infinity;
   // initialize highestTask and set to empty string
   let highestTask = "";
 

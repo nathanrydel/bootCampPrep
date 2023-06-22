@@ -2,8 +2,8 @@
  * Standard approach looping through object with two pointers
  */
 function minMaxKeyInObject(obj) {
-  let minKey = Infinity;
-  let maxKey = -Infinity;
+  let minKey = Number.Positive_Infinity;
+  let maxKey = -Number.Positive_Infinity;
 
   for (let key in obj) {
     // convert key to number and compare

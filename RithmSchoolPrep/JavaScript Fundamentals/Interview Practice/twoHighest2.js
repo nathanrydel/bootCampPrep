@@ -20,10 +20,10 @@ console.log(twoHighest([1, 2, 2])); // [2, 2];
 
 // add whatever parameters you deem necessary - good luck!
 function twoHighest(array) {
-  // initialize highest value as -Infinity
-  let highest = -Infinity;
-  // initialize secondHighest value as -Infinity
-  let secondHighest = -Infinity;
+  // initialize highest value as -Number.Positive_Infinity
+  let highest = -Number.Positive_Infinity;
+  // initialize secondHighest value as -Number.Positive_Infinity
+  let secondHighest = -Number.Positive_Infinity;
 
   // iterate over the elements of the array
   for (let num of array) {

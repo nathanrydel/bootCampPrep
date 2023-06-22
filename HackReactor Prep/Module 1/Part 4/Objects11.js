@@ -25,7 +25,7 @@ function getSmallestElementAtProperty(obj, key) {
   if (obj[key].length === 0) return undefined;
 
   // declare a minValue
-  let minValue = Infinity;
+  let minValue = Number.Positive_Infinity;
 
   // iterate over the elements of the obj[key] array
   // check if element is less than minValue
@@ -67,7 +67,7 @@ function getLargestElementAtProperty(obj, key) {
   if (obj[key].length === 0) return undefined;
 
   // declare maxValue
-  let maxValue = -Infinity;
+  let maxValue = -Number.Positive_Infinity;
 
   // iterate over the elements of the obj[key] array
   // check if current element is greater than maxValue

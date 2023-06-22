@@ -16,10 +16,10 @@ console.log(minMaxKeyInObject({ 1: "Elie", 4: "Matt", 2: "Tim" }));
 
 // add whatever parameters you deem necessary - good luck!
 function minMaxKeyInObject(object) {
-  // declare minKey and set to infinity
-  let minKey = Infinity;
-  // declare maxKey and set to -infinity
-  let maxKey = -Infinity;
+  // declare minKey and set to Number.Positive_Infinity
+  let minKey = Number.Positive_Infinity;
+  // declare maxKey and set to -Number.Positive_Infinity
+  let maxKey = -Number.Positive_Infinity;
 
   // iterate over key in object
   for (let key in object) {
