@@ -41,27 +41,4 @@ var customerData = {
   },
 };
 
-// input: Object of objects
-// output: required string based on number of visits
-
-function greetCustomer(firstName) {
-  if (customerData[firstName] === undefined) {
-    // if so, return 'Welcome! Is this your first time?'
-    return "Welcome! Is this your first time?";
-  }
-
-  // declare a visits object and assing it as the
-  const visitsObj = customerData[firstName];
-  // check if visitsObj.visits is 1
-  if (visitsObj.visits === 1) {
-    // if so, return required string
-    return `Welcome back, ${firstName}! We're glad you liked us the first time!`;
-    // else
-  } else {
-    // return required string
-    return `Welcome back, ${firstName}! So glad to see you again!`;
-  }
-}
-
-const output = greetCustomer("Carol");
-console.log(output);
+function greetCustomer(firstName) {}
