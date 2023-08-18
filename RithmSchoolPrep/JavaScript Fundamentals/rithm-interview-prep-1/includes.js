@@ -1,6 +1,6 @@
 // add whatever parameters you deem necessary - good luck!
 function includes(collection, value, idx) {
-  // check if not Array or not string
+  // check if collection is not Array and not string
   if (!Array.isArray(collection) && typeof collection !== "string") {
     // if so, treat as object
     // iterate over keys in object
