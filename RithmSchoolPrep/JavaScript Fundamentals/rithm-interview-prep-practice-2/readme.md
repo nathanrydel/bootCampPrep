@@ -39,48 +39,51 @@ Write a function called `calculateMonthlyOrders` that accepts an array of object
 Examples:
 
 ```js
+let orders = [
+  {
+    February: 1,
+    March: 2,
+    April: 2,
+  },
+  {
+    April: 1,
+    May: 2,
+    June: 2,
+  },
+];
 
-let orders = [{
-  February: 1,
-  March: 2,
-  April: 2
-},
-{
-  April: 1,
-  May: 2,
-  June: 2
-}]
+calculateMonthlyOrders(orders); // 10;
 
-calculateMonthlyOrders(orders) // 10;
-
-let orders = [{
-  January: 100,
-  February: 200,
-  March: 300,
-  April: 400,
-  May: 500,
-  June: 600,
-  July: 700,
-  August: 800,
-  September: 900,
-  October: 1000,
-  November: 1100,
-  December: 1200,
-},
-{
-  January: 200,
-  February: 300,
-  March: 400,
-  April: 500,
-  May: 600,
-  June: 700,
-  July: 800,
-  August: 900,
-  September: 1000,
-  October: 1100,
-  November: 1200,
-  December: 1300,
-}];
+let orders = [
+  {
+    January: 100,
+    February: 200,
+    March: 300,
+    April: 400,
+    May: 500,
+    June: 600,
+    July: 700,
+    August: 800,
+    September: 900,
+    October: 1000,
+    November: 1100,
+    December: 1200,
+  },
+  {
+    January: 200,
+    February: 300,
+    March: 400,
+    April: 500,
+    May: 600,
+    June: 700,
+    July: 800,
+    August: 900,
+    September: 1000,
+    October: 1100,
+    November: 1200,
+    December: 1300,
+  },
+];
 
 calculateMonthlyOrders(orders); // 16800
 ```
@@ -128,12 +131,12 @@ let obj = {
   a: [1, 10, 3],
   b: [4, 1, 7],
   c: [7, 7, 7],
-  d: [10, 7, 12]
+  d: [10, 7, 12],
 };
-countIfHasValue(obj, 1) // 2
-countIfHasValue(obj, 7) // 3
-countIfHasValue(obj, 10 // 1
-countIfHasValue(obj, 13 // 0
+countIfHasValue(obj, 1); // 2
+countIfHasValue(obj, 7); // 3
+countIfHasValue(obj, 10); // 2
+countIfHasValue(obj, 13); // 0
 ```
 
 ### countValidNumsInString
@@ -143,13 +146,13 @@ Write a function called `countValidNumsInString` which counts the number of vali
 Examples:
 
 ```js
-countValidNumsInString("") // 0
-countValidNumsInString("1") // 1
-countValidNumsInString("12") // 2
-countValidNumsInString("12abc3") // 3
-countValidNumsInString("1s2d3dsadas4") // 4
-countValidNumsInString("512,3,4!?!") // 5
-countValidNumsInString("123456") // 6
+countValidNumsInString(""); // 0
+countValidNumsInString("1"); // 1
+countValidNumsInString("12"); // 2
+countValidNumsInString("12abc3"); // 3
+countValidNumsInString("1s2d3dsadas4"); // 4
+countValidNumsInString("512,3,4!?!"); // 5
+countValidNumsInString("123456"); // 6
 ```
 
 ### divideObject
@@ -166,7 +169,7 @@ divideObject({
   fourth: 2,
   fifth: "fun",
   sixth: 10,
-})
+});
 // [ [12], [13] ]
 ```
 
@@ -177,9 +180,9 @@ Write a function called `findFirstAndLastIndex` that should accept an array and 
 Examples:
 
 ```js
-findFirstAndLastIndex([1, 2, 3, 4, 5], 3) // -1
-findFirstAndLastIndex([1, 2, 2, 2, 5], 12) // -1
-findFirstAndLastIndex([1, 2, 2, 2, 5], 2) // [1, 3]
+findFirstAndLastIndex([1, 2, 3, 4, 5], 3); // -1
+findFirstAndLastIndex([1, 2, 2, 2, 5], 12); // -1
+findFirstAndLastIndex([1, 2, 2, 2, 5], 2); // [1, 3]
 ```
 
 ### findFirstMove
@@ -207,34 +210,37 @@ Write a function called `findHighestPriorityTodo` which accepts an array of obje
 Examples:
 
 ```js
-
-let todos = [{
-  task: "Eat",
-  priority: 18,
-},
-{
-  task: "Sleep",
-  priority: 22,
-},
-{
-  task: "Solve problems",
-  priority: 17,
-}];
+let todos = [
+  {
+    task: "Eat",
+    priority: 18,
+  },
+  {
+    task: "Sleep",
+    priority: 22,
+  },
+  {
+    task: "Solve problems",
+    priority: 17,
+  },
+];
 
 findHighestPriorityTodo(todos); // ["Sleep", 22]
 
-let todos = [{
-  task: "Task 1",
-  priority: 1,
-},
-{
-  task: "Task 2",
-  priority: 2,
-},
-{
-  task: "Task 3",
-  priority: 3,
-}];
+let todos = [
+  {
+    task: "Task 1",
+    priority: 1,
+  },
+  {
+    task: "Task 2",
+    priority: 2,
+  },
+  {
+    task: "Task 3",
+    priority: 3,
+  },
+];
 
 findHighestPriorityTodo(todos); // ["Task 3", 3]
 ```
@@ -251,9 +257,9 @@ let matrix = [
   [4, 5, 6],
   [7, 8, 9],
 ];
-inMatrix(matrix, 5) // true
-inMatrix(matrix, 8) // true
-inMatrix(matrix, 10) // false
+inMatrix(matrix, 5); // true
+inMatrix(matrix, 8); // true
+inMatrix(matrix, 10); // false
 ```
 
 ### replaceAfter
@@ -263,26 +269,26 @@ Write a function called `replaceAfter` that accepts an array and an index. It sh
 Examples:
 
 ```js
-replaceAfter(["1", "2", "a", "b", "3", "4"], 2)
+replaceAfter(["1", "2", "a", "b", "3", "4"], 2);
 // ["1", "2", "Hello", "world", "3", "4"]
 
-replaceAfter(["a", "b", "c"], 0)
+replaceAfter(["a", "b", "c"], 0);
 // ["Hello", "world", "c"]
 ```
 
 ### reverseValues
 
-Write a function called `reverseValues`, which accepts an array of numbers, and iterates through it. As it traverses the array, if the value encountered is an even number, skip it AND skip the next two numbers, as well. Anything that isn't skipped should be added to a new array, which has all non-skipped numbers in reverse order of the original array.  Return this new array.
+Write a function called `reverseValues`, which accepts an array of numbers, and iterates through it. As it traverses the array, if the value encountered is an even number, skip it AND skip the next two numbers, as well. Anything that isn't skipped should be added to a new array, which has all non-skipped numbers in reverse order of the original array. Return this new array.
 
 Examples:
 
 ```js
-reverseValues([1, 1, 3, 3, 2]) // [3, 3, 1, 1]
-reverseValues([1, 3, 5, 7]) // [7, 5, 3, 1]
-reverseValues([1, 3, 4, 7]) // [3, 1]
-reverseValues([11, 13, 15, 20, 1, 1]) // [15, 13, 11]
-reverseValues([4, 5, 1, 1, 2, 1, 1]) // [1]
-reverseValues([2, 2, 2]) // []
+reverseValues([1, 1, 3, 3, 2]); // [3, 3, 1, 1]
+reverseValues([1, 3, 5, 7]); // [7, 5, 3, 1]
+reverseValues([1, 3, 4, 7]); // [3, 1]
+reverseValues([11, 13, 15, 20, 1, 1]); // [15, 13, 11]
+reverseValues([4, 5, 1, 1, 2, 1, 1]); // [1]
+reverseValues([2, 2, 2]); // []
 ```
 
 ### robotInstructions
@@ -292,12 +298,10 @@ Write a function called `robotInstructions` which accepts an array of moves. The
 Examples:
 
 ```js
-robotInstructions(["U", "D", "L", "R"])
+robotInstructions(["U", "D", "L", "R"]);
 // { "U": 1, "D": 1, "L": 1, "R": 1 })
 
-robotInstructions(
-  ["U", "D", "L", "R", "U", "D", "L", "R", "U", "D", "L", "R"]
-)
+robotInstructions(["U", "D", "L", "R", "U", "D", "L", "R", "U", "D", "L", "R"]);
 // { "U": 3, "D": 3, "L": 3, "R": 3 })
 ```
 
@@ -327,7 +331,7 @@ let schedule2 = {
   Sunday: true,
 };
 
-scheduleCheck(schedule1, schedule2) // 7;
+scheduleCheck(schedule1, schedule2); // 7;
 
 let schedule1 = {
   Monday: true,
@@ -348,7 +352,7 @@ let schedule2 = {
   Sunday: true,
 };
 
-scheduleCheck(schedule1, schedule2) // 6;
+scheduleCheck(schedule1, schedule2); // 6;
 ```
 
 ### separateLanguages
@@ -392,7 +396,7 @@ Write a function called `skipVowels` that accepts a string an returns an array. 
 Examples:
 
 ```js
-skipVowels("hello") // ["h", "l"]
-skipVowels("much fun") // ["m", "h", " ", "f"]
-skipVowels("aaaa") // []
+skipVowels("hello"); // ["h", "l"]
+skipVowels("much fun"); // ["m", "h", " ", "f"]
+skipVowels("aaaa"); // []
 ```
