@@ -6,14 +6,17 @@ function includes(collection, value, idx) {
     // iterate over keys in object
     for (let key in collection) {
       // check if key:value === value
-      return collection[key] === value;
+      if (value === collection[key]) {
+        return true;
+      }
     }
+    return false;
   }
 
   // check if idx is undefined
   if (idx === undefined) {
     // if so, check and return if collection includes value
-    return collection.includes(value);
+    return collection.indexOf(value) > -1;
   }
 
   // check and return if collection starting from idx includes value
