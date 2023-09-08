@@ -333,7 +333,7 @@ let schedule2 = {
 
 scheduleCheck(schedule1, schedule2); // 7;
 
-let schedule1 = {
+let schedule3 = {
   Monday: true,
   Tuesday: true,
   Wednesday: true,
@@ -342,7 +342,7 @@ let schedule1 = {
   Saturday: true,
   Sunday: true,
 };
-let schedule2 = {
+let schedule4 = {
   Monday: true,
   Tuesday: true,
   Wednesday: true,
@@ -352,7 +352,7 @@ let schedule2 = {
   Sunday: true,
 };
 
-scheduleCheck(schedule1, schedule2); // 6;
+scheduleCheck(schedule3, schedule4); // 6;
 ```
 
 ### separateLanguages
@@ -362,8 +362,7 @@ Write a function called `separateLanguages` which which takes an array of string
 Examples:
 
 ```js
-
-separateLanguages(["python", "python", "python", "javascript", "c++"])
+separateLanguages(["python", "python", "python", "javascript", "c++"]);
 /*
 {
   python: 3,
@@ -371,15 +370,15 @@ separateLanguages(["python", "python", "python", "javascript", "c++"])
   other: ["c++"],
 }
 */
-  })
-separateLanguages(["python", "python", "spanish", "javascript"])
+
+separateLanguages(["python", "python", "spanish", "javascript"]);
 /*
   python: 2,
   javascript: 1,
   other: ["spanish"],
 }
 */
-separateLanguages(["greek", "french", "yoruba", "python"])
+separateLanguages(["greek", "french", "yoruba", "python"]);
 /*
 {
   python: 1,
