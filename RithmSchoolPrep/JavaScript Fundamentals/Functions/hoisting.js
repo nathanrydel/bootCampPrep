@@ -14,7 +14,7 @@ sayHiAgain("Matt");
 
 /*
 function findLowest(values) {
-  let lowestNumber = Infinity // start with the highest possible number
+  let lowestNumber = Number.Positive_Infinity // start with the highest possible number
   for(let val of values){
       if (isNaN(val)) {
           console.log(`not a number: ${val}`);
@@ -38,7 +38,7 @@ function trueIfNum(num) {
 }
 
 function findLowest(values) {
-  let lowestNumber = Infinity; // start with the highest possible number
+  let lowestNumber = Number.Positive_Infinity; // start with the highest possible number
   for (let val of values) {
     if (trueIfNum(val) && val < lowestNumber) {
       lowestNumber = val;

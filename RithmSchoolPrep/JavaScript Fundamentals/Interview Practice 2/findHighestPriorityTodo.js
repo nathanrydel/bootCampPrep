@@ -42,12 +42,12 @@ console.log(findHighestPriorityTodo(todos2)); // ["Task 3", 3]
 // ouput: Array of task value, priorty value
 
 function findHighestPriorityTodo(todos) {
-  // initialize highestPriority and set to -Infinity
-  let highestPriority = -Infinity;
+  // initialize highestPriority and set to Number.NEGATIVE_INFINITY
+  let highestPriority = Number.NEGATIVE_INFINITY;
   // initialize highestTask and set to empty string
   let highestTask = "";
 
-  // iterate over each object of todos
+  // iterate over each object of todos array
   for (const todo of todos) {
     // check if todo.priority > highestPriority
     if (todo.priority > highestPriority) {
