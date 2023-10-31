@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Long list</title>
+</head>
+
+<body>
+  <ul>
+    Profit/Loss by Day
+    <li>-$10</li>
+    <li>$9</li>
+    <li>$1</li>
+    <li>$1</li>
+    <li>$0</li>
+    <li>$0</li>
+    <li>$10</li>
+    <li>-$7</li>
+    <li>-$6</li>
+    <li>-$9</li>
+  </ul>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+  <script>
+    for (var i = 0; i < $("li").length; i++) {
+      console.log("Day " + i + ": " + $("li").eq(i).text());
+    }
+
+    $("li").each(function (i, el) {
+      console.log("Day " + i + ": " + $(el).text());
+    });
+
+    var summary = $("li").map(function (i, el) {
+      return $("<p>", {
+        text: "On day " + i + ", I earned " + $(el).text()
+      });
+    });
+    // summary is now a jQuery object which contains one p tag for each li
+
+    $("body").append(summary.get());
+    // this appends the summary to the page.
+    // The .get method turns summary, a jQuery object, into an array.
+    // Without invoking get, you'll receive a TypeError.
+
+    $("li").filter(function (i, el) {
+      return $(el).text()[0] === "-";
+      // returns true if the first character in the text is a minus sign,
+      // i.e. this checks whether or not the number is negative
+    }).css('color', 'red');
+    // We've chained filter and css together; filter returns to us the
+    // li's with negative numbers in them, and we then style those li's
+    // to have red text.
+  </script>
+</body>
+
+</html>
